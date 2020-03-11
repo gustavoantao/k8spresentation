@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myhello
+  labels:
+    app: myhello
+spec:
+  selector:
+    matchLabels:
+      app: myhello
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: myhello
+    spec:
+      containers:      
+        - image: gustavoantao/myhello
+          imagePullPolicy: Always
+          resources:
+            requests:
+              memory: "100Mi"
+              cpu: "500m"
+            limits:
+              memory: "200Mi"
+              cpu: "1"
+          name: myhello-container 
+          ports:
+            - containerPort: 8888
+

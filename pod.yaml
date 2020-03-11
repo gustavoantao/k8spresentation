@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myhello
+  namespace: default
+  labels:
+    app: myhello
+spec:
+  containers:
+  - name: myhello
+    image: gustavoantao/myhello
+    resources:
+      limits:
+        memory: "200Mi"
+      requests:
+        memory: "100Mi"
+    ports:
+      - containerPort: 8888
