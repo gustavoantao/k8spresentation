@@ -1,7 +1,5 @@
 
 
-
-
 apt-get update && apt-get install -y apt-transport-https curl
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
 cat <<EOF | sudo tee /etc/apt/sources.list.d/kubernetes.list
@@ -13,5 +11,10 @@ apt-mark hold kubelet kubeadm kubectl
 
 swapoff -a
 
-
 kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"
+
+
+Single pod
+Deployment (yaml e run)
+Service(yaml e expose)
+Namespace
