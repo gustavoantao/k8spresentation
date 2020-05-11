@@ -1,0 +1,9 @@
+
+Minikube:
+https://kubernetes.io/docs/tasks/tools/install-minikube/
+
+MicroK8s
+https://microk8s.io/docs/
+
+Para desenvolvedores:
+https://tilt.dev
